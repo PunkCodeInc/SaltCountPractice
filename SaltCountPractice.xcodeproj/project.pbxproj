@@ -7,18 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		696699A721A9062A00E3FABF /* Counter+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696699A521A9062A00E3FABF /* Counter+CoreDataClass.swift */; };
+		696699A821A9062A00E3FABF /* Counter+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696699A521A9062A00E3FABF /* Counter+CoreDataClass.swift */; };
+		696699A921A9062A00E3FABF /* Counter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696699A621A9062A00E3FABF /* Counter+CoreDataProperties.swift */; };
+		696699AA21A9062A00E3FABF /* Counter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696699A621A9062A00E3FABF /* Counter+CoreDataProperties.swift */; };
+		696699AC21AA25A600E3FABF /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696699AB21AA25A600E3FABF /* UITextField+Extensions.swift */; };
+		696699AD21AA25A600E3FABF /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696699AB21AA25A600E3FABF /* UITextField+Extensions.swift */; };
+		696699B121AA808B00E3FABF /* NSDictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696699B021AA808B00E3FABF /* NSDictionary+Extensions.swift */; };
+		696699B221AA808B00E3FABF /* NSDictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696699B021AA808B00E3FABF /* NSDictionary+Extensions.swift */; };
+		69BC06EF21A8A8CE008FE492 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC06EE21A8A8CE008FE492 /* TabBarController.swift */; };
+		69BC06F021A8A8CE008FE492 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC06EE21A8A8CE008FE492 /* TabBarController.swift */; };
+		69BC06F221A8AB58008FE492 /* TabBarDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC06F121A8AB58008FE492 /* TabBarDataController.swift */; };
+		69BC06F321A8AB58008FE492 /* TabBarDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC06F121A8AB58008FE492 /* TabBarDataController.swift */; };
+		69BC06F721A8B4CB008FE492 /* CounterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC06F521A8B4CB008FE492 /* CounterTableViewCell.swift */; };
+		69BC06F821A8B4CB008FE492 /* CounterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC06F521A8B4CB008FE492 /* CounterTableViewCell.swift */; };
+		69BC06F921A8B4CB008FE492 /* CounterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69BC06F621A8B4CB008FE492 /* CounterTableViewCell.xib */; };
+		69BC06FA21A8B4CB008FE492 /* CounterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69BC06F621A8B4CB008FE492 /* CounterTableViewCell.xib */; };
+		69BC06FD21A8D75C008FE492 /* AddOrEditCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC06FB21A8D75C008FE492 /* AddOrEditCounterViewController.swift */; };
+		69BC06FE21A8D75C008FE492 /* AddOrEditCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC06FB21A8D75C008FE492 /* AddOrEditCounterViewController.swift */; };
+		69BC06FF21A8D75C008FE492 /* AddOrEditCounterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69BC06FC21A8D75C008FE492 /* AddOrEditCounterViewController.xib */; };
+		69BC070021A8D75C008FE492 /* AddOrEditCounterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69BC06FC21A8D75C008FE492 /* AddOrEditCounterViewController.xib */; };
+		69BC070221A8D79D008FE492 /* AddOrEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC070121A8D79D008FE492 /* AddOrEditController.swift */; };
+		69BC070321A8D79D008FE492 /* AddOrEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC070121A8D79D008FE492 /* AddOrEditController.swift */; };
 		69E7B4DC21A73C9C0071AE7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E7B4DB21A73C9C0071AE7F /* AppDelegate.swift */; };
 		69E7B4E421A73C9C0071AE7F /* SaltCount.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69E7B4E221A73C9C0071AE7F /* SaltCount.xcdatamodeld */; };
 		69E7B4E621A73C9F0071AE7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69E7B4E521A73C9F0071AE7F /* Assets.xcassets */; };
 		69E7B4E921A73C9F0071AE7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69E7B4E721A73C9F0071AE7F /* LaunchScreen.storyboard */; };
 		69E7B4F421A73C9F0071AE7F /* SaltCountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E7B4F321A73C9F0071AE7F /* SaltCountTests.swift */; };
 		69E7B4FF21A73C9F0071AE7F /* SaltCountUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E7B4FE21A73C9F0071AE7F /* SaltCountUITests.swift */; };
-		69E7B51121A73D4D0071AE7F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E7B50F21A73D4D0071AE7F /* MainViewController.swift */; };
-		69E7B51221A73D4D0071AE7F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E7B50F21A73D4D0071AE7F /* MainViewController.swift */; };
-		69E7B51321A73D4D0071AE7F /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E7B51021A73D4D0071AE7F /* MainViewController.xib */; };
-		69E7B51421A73D4D0071AE7F /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E7B51021A73D4D0071AE7F /* MainViewController.xib */; };
-		69E7B51621A73DDE0071AE7F /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E7B51521A73DDE0071AE7F /* MainController.swift */; };
-		69E7B51721A73DDE0071AE7F /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E7B51521A73DDE0071AE7F /* MainController.swift */; };
+		69E7B51121A73D4D0071AE7F /* TableListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E7B50F21A73D4D0071AE7F /* TableListViewController.swift */; };
+		69E7B51221A73D4D0071AE7F /* TableListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E7B50F21A73D4D0071AE7F /* TableListViewController.swift */; };
+		69E7B51321A73D4D0071AE7F /* TableListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E7B51021A73D4D0071AE7F /* TableListViewController.xib */; };
+		69E7B51421A73D4D0071AE7F /* TableListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E7B51021A73D4D0071AE7F /* TableListViewController.xib */; };
+		69E7B51621A73DDE0071AE7F /* TableListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E7B51521A73DDE0071AE7F /* TableListController.swift */; };
+		69E7B51721A73DDE0071AE7F /* TableListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E7B51521A73DDE0071AE7F /* TableListController.swift */; };
 		69E7B51A21A744DF0071AE7F /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E7B51921A744DF0071AE7F /* DataStore.swift */; };
 		69E7B51B21A744DF0071AE7F /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E7B51921A744DF0071AE7F /* DataStore.swift */; };
 /* End PBXBuildFile section */
@@ -41,21 +63,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		69E7B4D821A73C9C0071AE7F /* SaltCount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaltCount.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		696699A521A9062A00E3FABF /* Counter+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Counter+CoreDataClass.swift"; sourceTree = "<group>"; };
+		696699A621A9062A00E3FABF /* Counter+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Counter+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		696699AB21AA25A600E3FABF /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		696699B021AA808B00E3FABF /* NSDictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDictionary+Extensions.swift"; sourceTree = "<group>"; };
+		69BC06EE21A8A8CE008FE492 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		69BC06F121A8AB58008FE492 /* TabBarDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarDataController.swift; sourceTree = "<group>"; };
+		69BC06F521A8B4CB008FE492 /* CounterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterTableViewCell.swift; sourceTree = "<group>"; };
+		69BC06F621A8B4CB008FE492 /* CounterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CounterTableViewCell.xib; sourceTree = "<group>"; };
+		69BC06FB21A8D75C008FE492 /* AddOrEditCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrEditCounterViewController.swift; sourceTree = "<group>"; };
+		69BC06FC21A8D75C008FE492 /* AddOrEditCounterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddOrEditCounterViewController.xib; sourceTree = "<group>"; };
+		69BC070121A8D79D008FE492 /* AddOrEditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrEditController.swift; sourceTree = "<group>"; };
+		69E7B4D821A73C9C0071AE7F /* SaltCountPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaltCountPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E7B4DB21A73C9C0071AE7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69E7B4E321A73C9C0071AE7F /* SaltCount.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SaltCount.xcdatamodel; sourceTree = "<group>"; };
 		69E7B4E521A73C9F0071AE7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69E7B4E821A73C9F0071AE7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69E7B4EA21A73C9F0071AE7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		69E7B4EF21A73C9F0071AE7F /* SaltCountTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaltCountTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69E7B4EF21A73C9F0071AE7F /* SaltCountPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaltCountPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E7B4F321A73C9F0071AE7F /* SaltCountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaltCountTests.swift; sourceTree = "<group>"; };
 		69E7B4F521A73C9F0071AE7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		69E7B4FA21A73C9F0071AE7F /* SaltCountUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaltCountUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69E7B4FA21A73C9F0071AE7F /* SaltCountPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaltCountPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E7B4FE21A73C9F0071AE7F /* SaltCountUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaltCountUITests.swift; sourceTree = "<group>"; };
 		69E7B50021A73C9F0071AE7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		69E7B50F21A73D4D0071AE7F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		69E7B51021A73D4D0071AE7F /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		69E7B51521A73DDE0071AE7F /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		69E7B50F21A73D4D0071AE7F /* TableListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableListViewController.swift; sourceTree = "<group>"; };
+		69E7B51021A73D4D0071AE7F /* TableListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableListViewController.xib; sourceTree = "<group>"; };
+		69E7B51521A73DDE0071AE7F /* TableListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableListController.swift; sourceTree = "<group>"; };
 		69E7B51921A744DF0071AE7F /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +117,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		696699AE21AA25AD00E3FABF /* UX */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UX;
+			sourceTree = "<group>";
+		};
+		696699AF21AA25B300E3FABF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				696699B021AA808B00E3FABF /* NSDictionary+Extensions.swift */,
+				696699AB21AA25A600E3FABF /* UITextField+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		69BC06F421A8B49D008FE492 /* Counter Cells */ = {
+			isa = PBXGroup;
+			children = (
+				69BC06F521A8B4CB008FE492 /* CounterTableViewCell.swift */,
+				69BC06F621A8B4CB008FE492 /* CounterTableViewCell.xib */,
+			);
+			path = "Counter Cells";
+			sourceTree = "<group>";
+		};
 		69E7B4CF21A73C9C0071AE7F = {
 			isa = PBXGroup;
 			children = (
@@ -97,9 +155,9 @@
 		69E7B4D921A73C9C0071AE7F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				69E7B4D821A73C9C0071AE7F /* SaltCount.app */,
-				69E7B4EF21A73C9F0071AE7F /* SaltCountTests.xctest */,
-				69E7B4FA21A73C9F0071AE7F /* SaltCountUITests.xctest */,
+				69E7B4D821A73C9C0071AE7F /* SaltCountPractice.app */,
+				69E7B4EF21A73C9F0071AE7F /* SaltCountPracticeTests.xctest */,
+				69E7B4FA21A73C9F0071AE7F /* SaltCountPracticeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,8 +166,10 @@
 			isa = PBXGroup;
 			children = (
 				69E7B4DB21A73C9C0071AE7F /* AppDelegate.swift */,
-				69E7B50E21A73D270071AE7F /* VCs */,
+				696699AF21AA25B300E3FABF /* Extensions */,
 				69E7B51821A744B20071AE7F /* Data */,
+				696699AE21AA25AD00E3FABF /* UX */,
+				69E7B50E21A73D270071AE7F /* VCs */,
 				69E7B4E521A73C9F0071AE7F /* Assets.xcassets */,
 				69E7B4E721A73C9F0071AE7F /* LaunchScreen.storyboard */,
 				69E7B4EA21A73C9F0071AE7F /* Info.plist */,
@@ -139,9 +199,15 @@
 		69E7B50E21A73D270071AE7F /* VCs */ = {
 			isa = PBXGroup;
 			children = (
-				69E7B50F21A73D4D0071AE7F /* MainViewController.swift */,
-				69E7B51021A73D4D0071AE7F /* MainViewController.xib */,
-				69E7B51521A73DDE0071AE7F /* MainController.swift */,
+				69BC06EE21A8A8CE008FE492 /* TabBarController.swift */,
+				69BC06F121A8AB58008FE492 /* TabBarDataController.swift */,
+				69BC06F421A8B49D008FE492 /* Counter Cells */,
+				69E7B50F21A73D4D0071AE7F /* TableListViewController.swift */,
+				69E7B51021A73D4D0071AE7F /* TableListViewController.xib */,
+				69E7B51521A73DDE0071AE7F /* TableListController.swift */,
+				69BC06FB21A8D75C008FE492 /* AddOrEditCounterViewController.swift */,
+				69BC06FC21A8D75C008FE492 /* AddOrEditCounterViewController.xib */,
+				69BC070121A8D79D008FE492 /* AddOrEditController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -149,6 +215,8 @@
 		69E7B51821A744B20071AE7F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				696699A521A9062A00E3FABF /* Counter+CoreDataClass.swift */,
+				696699A621A9062A00E3FABF /* Counter+CoreDataProperties.swift */,
 				69E7B51921A744DF0071AE7F /* DataStore.swift */,
 			);
 			path = Data;
@@ -157,9 +225,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		69E7B4D721A73C9C0071AE7F /* SaltCount */ = {
+		69E7B4D721A73C9C0071AE7F /* SaltCountPractice */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 69E7B50321A73C9F0071AE7F /* Build configuration list for PBXNativeTarget "SaltCount" */;
+			buildConfigurationList = 69E7B50321A73C9F0071AE7F /* Build configuration list for PBXNativeTarget "SaltCountPractice" */;
 			buildPhases = (
 				69E7B4D421A73C9C0071AE7F /* Sources */,
 				69E7B4D521A73C9C0071AE7F /* Frameworks */,
@@ -169,14 +237,14 @@
 			);
 			dependencies = (
 			);
-			name = SaltCount;
+			name = SaltCountPractice;
 			productName = SaltCount;
-			productReference = 69E7B4D821A73C9C0071AE7F /* SaltCount.app */;
+			productReference = 69E7B4D821A73C9C0071AE7F /* SaltCountPractice.app */;
 			productType = "com.apple.product-type.application";
 		};
-		69E7B4EE21A73C9F0071AE7F /* SaltCountTests */ = {
+		69E7B4EE21A73C9F0071AE7F /* SaltCountPracticeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 69E7B50621A73C9F0071AE7F /* Build configuration list for PBXNativeTarget "SaltCountTests" */;
+			buildConfigurationList = 69E7B50621A73C9F0071AE7F /* Build configuration list for PBXNativeTarget "SaltCountPracticeTests" */;
 			buildPhases = (
 				69E7B4EB21A73C9F0071AE7F /* Sources */,
 				69E7B4EC21A73C9F0071AE7F /* Frameworks */,
@@ -187,14 +255,14 @@
 			dependencies = (
 				69E7B4F121A73C9F0071AE7F /* PBXTargetDependency */,
 			);
-			name = SaltCountTests;
+			name = SaltCountPracticeTests;
 			productName = SaltCountTests;
-			productReference = 69E7B4EF21A73C9F0071AE7F /* SaltCountTests.xctest */;
+			productReference = 69E7B4EF21A73C9F0071AE7F /* SaltCountPracticeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		69E7B4F921A73C9F0071AE7F /* SaltCountUITests */ = {
+		69E7B4F921A73C9F0071AE7F /* SaltCountPracticeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 69E7B50921A73C9F0071AE7F /* Build configuration list for PBXNativeTarget "SaltCountUITests" */;
+			buildConfigurationList = 69E7B50921A73C9F0071AE7F /* Build configuration list for PBXNativeTarget "SaltCountPracticeUITests" */;
 			buildPhases = (
 				69E7B4F621A73C9F0071AE7F /* Sources */,
 				69E7B4F721A73C9F0071AE7F /* Frameworks */,
@@ -205,9 +273,9 @@
 			dependencies = (
 				69E7B4FC21A73C9F0071AE7F /* PBXTargetDependency */,
 			);
-			name = SaltCountUITests;
+			name = SaltCountPracticeUITests;
 			productName = SaltCountUITests;
-			productReference = 69E7B4FA21A73C9F0071AE7F /* SaltCountUITests.xctest */;
+			productReference = 69E7B4FA21A73C9F0071AE7F /* SaltCountPracticeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -233,7 +301,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 69E7B4D321A73C9C0071AE7F /* Build configuration list for PBXProject "SaltCount" */;
+			buildConfigurationList = 69E7B4D321A73C9C0071AE7F /* Build configuration list for PBXProject "SaltCountPractice" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -246,9 +314,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				69E7B4D721A73C9C0071AE7F /* SaltCount */,
-				69E7B4EE21A73C9F0071AE7F /* SaltCountTests */,
-				69E7B4F921A73C9F0071AE7F /* SaltCountUITests */,
+				69E7B4D721A73C9C0071AE7F /* SaltCountPractice */,
+				69E7B4EE21A73C9F0071AE7F /* SaltCountPracticeTests */,
+				69E7B4F921A73C9F0071AE7F /* SaltCountPracticeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,8 +326,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69BC06F921A8B4CB008FE492 /* CounterTableViewCell.xib in Resources */,
 				69E7B4E921A73C9F0071AE7F /* LaunchScreen.storyboard in Resources */,
-				69E7B51321A73D4D0071AE7F /* MainViewController.xib in Resources */,
+				69E7B51321A73D4D0071AE7F /* TableListViewController.xib in Resources */,
+				69BC06FF21A8D75C008FE492 /* AddOrEditCounterViewController.xib in Resources */,
 				69E7B4E621A73C9F0071AE7F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +338,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69E7B51421A73D4D0071AE7F /* MainViewController.xib in Resources */,
+				69BC06FA21A8B4CB008FE492 /* CounterTableViewCell.xib in Resources */,
+				69BC070021A8D75C008FE492 /* AddOrEditCounterViewController.xib in Resources */,
+				69E7B51421A73D4D0071AE7F /* TableListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,9 +358,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69E7B51121A73D4D0071AE7F /* MainViewController.swift in Sources */,
-				69E7B51621A73DDE0071AE7F /* MainController.swift in Sources */,
+				696699B121AA808B00E3FABF /* NSDictionary+Extensions.swift in Sources */,
+				696699AC21AA25A600E3FABF /* UITextField+Extensions.swift in Sources */,
+				696699A921A9062A00E3FABF /* Counter+CoreDataProperties.swift in Sources */,
+				69BC06F721A8B4CB008FE492 /* CounterTableViewCell.swift in Sources */,
+				69E7B51121A73D4D0071AE7F /* TableListViewController.swift in Sources */,
+				69BC06F221A8AB58008FE492 /* TabBarDataController.swift in Sources */,
+				69E7B51621A73DDE0071AE7F /* TableListController.swift in Sources */,
+				69BC070221A8D79D008FE492 /* AddOrEditController.swift in Sources */,
 				69E7B4E421A73C9C0071AE7F /* SaltCount.xcdatamodeld in Sources */,
+				696699A721A9062A00E3FABF /* Counter+CoreDataClass.swift in Sources */,
+				69BC06EF21A8A8CE008FE492 /* TabBarController.swift in Sources */,
+				69BC06FD21A8D75C008FE492 /* AddOrEditCounterViewController.swift in Sources */,
 				69E7B51A21A744DF0071AE7F /* DataStore.swift in Sources */,
 				69E7B4DC21A73C9C0071AE7F /* AppDelegate.swift in Sources */,
 			);
@@ -299,9 +380,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				69E7B4F421A73C9F0071AE7F /* SaltCountTests.swift in Sources */,
+				69BC06F321A8AB58008FE492 /* TabBarDataController.swift in Sources */,
 				69E7B51B21A744DF0071AE7F /* DataStore.swift in Sources */,
-				69E7B51721A73DDE0071AE7F /* MainController.swift in Sources */,
-				69E7B51221A73D4D0071AE7F /* MainViewController.swift in Sources */,
+				69E7B51721A73DDE0071AE7F /* TableListController.swift in Sources */,
+				696699A821A9062A00E3FABF /* Counter+CoreDataClass.swift in Sources */,
+				69BC06F021A8A8CE008FE492 /* TabBarController.swift in Sources */,
+				69BC06F821A8B4CB008FE492 /* CounterTableViewCell.swift in Sources */,
+				69BC06FE21A8D75C008FE492 /* AddOrEditCounterViewController.swift in Sources */,
+				69E7B51221A73D4D0071AE7F /* TableListViewController.swift in Sources */,
+				696699AD21AA25A600E3FABF /* UITextField+Extensions.swift in Sources */,
+				696699B221AA808B00E3FABF /* NSDictionary+Extensions.swift in Sources */,
+				696699AA21A9062A00E3FABF /* Counter+CoreDataProperties.swift in Sources */,
+				69BC070321A8D79D008FE492 /* AddOrEditController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,12 +408,12 @@
 /* Begin PBXTargetDependency section */
 		69E7B4F121A73C9F0071AE7F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 69E7B4D721A73C9C0071AE7F /* SaltCount */;
+			target = 69E7B4D721A73C9C0071AE7F /* SaltCountPractice */;
 			targetProxy = 69E7B4F021A73C9F0071AE7F /* PBXContainerItemProxy */;
 		};
 		69E7B4FC21A73C9F0071AE7F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 69E7B4D721A73C9C0071AE7F /* SaltCount */;
+			target = 69E7B4D721A73C9C0071AE7F /* SaltCountPractice */;
 			targetProxy = 69E7B4FB21A73C9F0071AE7F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -509,7 +599,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SaltCount.app/SaltCount";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SaltCountPractice.app/SaltCountPractice";
 			};
 			name = Debug;
 		};
@@ -530,7 +620,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SaltCount.app/SaltCount";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SaltCountPractice.app/SaltCountPractice";
 			};
 			name = Release;
 		};
@@ -577,7 +667,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		69E7B4D321A73C9C0071AE7F /* Build configuration list for PBXProject "SaltCount" */ = {
+		69E7B4D321A73C9C0071AE7F /* Build configuration list for PBXProject "SaltCountPractice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				69E7B50121A73C9F0071AE7F /* Debug */,
@@ -586,7 +676,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		69E7B50321A73C9F0071AE7F /* Build configuration list for PBXNativeTarget "SaltCount" */ = {
+		69E7B50321A73C9F0071AE7F /* Build configuration list for PBXNativeTarget "SaltCountPractice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				69E7B50421A73C9F0071AE7F /* Debug */,
@@ -595,7 +685,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		69E7B50621A73C9F0071AE7F /* Build configuration list for PBXNativeTarget "SaltCountTests" */ = {
+		69E7B50621A73C9F0071AE7F /* Build configuration list for PBXNativeTarget "SaltCountPracticeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				69E7B50721A73C9F0071AE7F /* Debug */,
@@ -604,7 +694,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		69E7B50921A73C9F0071AE7F /* Build configuration list for PBXNativeTarget "SaltCountUITests" */ = {
+		69E7B50921A73C9F0071AE7F /* Build configuration list for PBXNativeTarget "SaltCountPracticeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				69E7B50A21A73C9F0071AE7F /* Debug */,

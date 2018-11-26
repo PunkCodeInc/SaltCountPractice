@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:SaltCount.xcodeproj">
+      location = "self:/Users/JD/Documents/SaltCount/SaltCountPractice.xcodeproj">
    </FileRef>
 </Workspace>
