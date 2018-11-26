@@ -103,7 +103,7 @@ extension AddOrEditCounterViewController: UITextFieldDelegate {
         } else {
             if controller.allNumericalsIn(string: string) {
                 var result = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? string
-                // Trims 0 at the start of numerical string and manually replaces, otherwise allows change as is
+                
                 if controller.zeroAtStartOf(numericalString: result)
                     && !(textField == startingCountField && result.count == 1) {
                     result.removeFirst()
