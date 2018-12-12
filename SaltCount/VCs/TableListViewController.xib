@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TableListViewController" customModule="SaltCountPractice" customModuleProvider="target">
             <connections>
-                <outlet property="activityIndicator" destination="4Ll-ge-7db" id="obW-nd-9Vz"/>
                 <outlet property="countersTableView" destination="wlY-f0-XxB" id="Gn6-XR-W9s"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -30,17 +28,12 @@
                         <outlet property="delegate" destination="-1" id="68b-mW-6Na"/>
                     </connections>
                 </tableView>
-                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="4Ll-ge-7db">
-                    <rect key="frame" x="177.5" y="333.5" width="20" height="20"/>
-                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wlY-f0-XxB" secondAttribute="bottom" id="Xnl-6y-CD6"/>
-                <constraint firstItem="4Ll-ge-7db" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Zfg-Yd-4RM"/>
                 <constraint firstItem="wlY-f0-XxB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZnK-J6-fBX"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wlY-f0-XxB" secondAttribute="trailing" id="ZrY-vq-2w8"/>
-                <constraint firstItem="4Ll-ge-7db" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="p39-8p-oeB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="wlY-f0-XxB" secondAttribute="top" id="zoE-hH-6gd"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

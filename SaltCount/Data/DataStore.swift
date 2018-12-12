@@ -20,8 +20,8 @@ class DataStore: NSObject {
     
     // MARK: - Core Data stack
     
-    private lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "SaltCount")
+    private lazy var persistentContainer: PunkCodePersistentContainer = {
+        let container = PunkCodePersistentContainer(name: "SaltCount")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 print("Unable to Load Persistent Stores")
@@ -62,24 +62,45 @@ class DataStore: NSObject {
                               entity: entity,
                               insertIntoManagedObjectContext: persistentContainer.viewContext)
         
-        do {
-            try counter.managedObjectContext?.save()
-            try persistentContainer.viewContext.save()
-        } catch {
-            let saveError = error as NSError
-            print("Unable to Save Note")
-            print("\(saveError), \(saveError.localizedDescription)")
-        }
-        
-        completion()
+        saveFor(counter: counter, completion: completion)
     }
     
     func numberOfCounters() -> Int? {
         return fetchedResultsController.fetchedObjects?.count
     }
     
-    func getCounterAt(indexPath: IndexPath) -> Counter {
+    func getCounterAt(indexPath: IndexPath) -> Counter? {
+        guard let fetchedObjects = fetchedResultsController.fetchedObjects,
+            indexPath.row < fetchedObjects.count else {
+                return nil
+        }
         return fetchedResultsController.object(at: indexPath)
+    }
+    
+    func saveFor(counter: Counter, completion: Completion) {
+        do {
+            try counter.managedObjectContext?.save()
+            try persistentContainer.viewContext.save()
+        } catch {
+            let saveError = error as NSError
+            print("Unable to Save Counter")
+            print("\(saveError), \(saveError.localizedDescription)")
+        }
+        
+        completion()
+    }
+    
+    func delete(counter: Counter, completion: Completion) {
+        do {
+            persistentContainer.viewContext.delete(counter)
+            try persistentContainer.viewContext.save()
+        } catch {
+            let saveError = error as NSError
+            print("Unable to Save Counter")
+            print("\(saveError), \(saveError.localizedDescription)")
+        }
+        
+        completion()
     }
     
     func saveContext() {

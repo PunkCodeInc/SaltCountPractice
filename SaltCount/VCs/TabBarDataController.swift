@@ -20,12 +20,45 @@ class TabBarDataController: NSObject {
         self.dataStore = DataStore(fetchedResultsDelegate: tableListDelegate)
     }
     
-    func fetchCounters(completion: Completion?) {
+    func fetchCounters(completion: Completion? = nil) {
         dataStore?.performFetch(completion: completion)
     }
     
     func insert(counterDict: NSDictionary, completion: Completion) {
         dataStore?.addCounterFrom(dict: counterDict, completion: completion)
+    }
+    
+    func incrementCounterAt(indexPath: IndexPath, completion: Completion) {
+        guard let counter = dataStore?.getCounterAt(indexPath: indexPath) else {
+            return
+        }
+        counter.incrementCount()
+        dataStore?.saveFor(counter: counter, completion: completion)
+    }
+    
+    func decrementCounterAt(indexPath: IndexPath, completion: Completion) {
+        guard let counter = dataStore?.getCounterAt(indexPath: indexPath) else {
+            return
+        }
+        counter.decrementCount()
+        dataStore?.saveFor(counter: counter, completion: completion)
+    }
+    
+    func updateCounterAt(indexPath: IndexPath,
+                         withValues values: NSDictionary,
+                         completion: Completion) {
+        guard let counter = dataStore?.getCounterAt(indexPath: indexPath) else {
+            return
+        }
+        counter.updateWith(values: values)
+        dataStore?.saveFor(counter: counter, completion: completion)
+    }
+    
+    func deleteCounterAt(indexPath: IndexPath, completion: Completion) {
+        guard let counter = dataStore?.getCounterAt(indexPath: indexPath) else {
+            return
+        }
+        dataStore?.delete(counter: counter, completion: completion)
     }
     
     func numberOfCounters() -> Int? {

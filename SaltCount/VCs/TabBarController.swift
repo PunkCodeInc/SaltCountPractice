@@ -12,6 +12,12 @@ typealias Completion = () -> Void
 protocol TabBarParentDelegate {
     func fetchCounters(completion: Completion?)
     func createCounterFrom(counterDict: NSDictionary, completion: Completion)
+    func incrementCounterAt(indexPath: IndexPath)
+    func decrementCounterAt(indexPath: IndexPath)
+    func updateCounterAt(indexPath: IndexPath,
+                         withValues counterDict:NSDictionary,
+                         completion: Completion)
+    func deleteCounterAt(indexPath: IndexPath, completion: Completion)
     func counterCount() -> Int?
     func counterAt(indexPath: IndexPath) -> Counter?
 }
@@ -73,6 +79,30 @@ extension TabBarController: TabBarParentDelegate {
         dataController.insert(counterDict: counterDict, completion: completion)
     }
     
+    func incrementCounterAt(indexPath: IndexPath) {
+        dataController.incrementCounterAt(indexPath: indexPath) { [weak self] in
+            self?.dataController.fetchCounters(completion: nil)
+        }
+    }
+    
+    func decrementCounterAt(indexPath: IndexPath) {
+        dataController.decrementCounterAt(indexPath: indexPath) { [weak self] in
+            self?.dataController.fetchCounters(completion: nil)
+        }
+    }
+    
+    func updateCounterAt(indexPath: IndexPath,
+                         withValues counterDict: NSDictionary,
+                         completion: Completion) {
+        dataController.updateCounterAt(indexPath: indexPath,
+                                       withValues: counterDict,
+                                       completion: completion)
+    }
+    
+    func deleteCounterAt(indexPath: IndexPath, completion: Completion) {
+        dataController.deleteCounterAt(indexPath: indexPath, completion: completion)
+    }
+    
     func counterCount() -> Int? {
         return dataController.numberOfCounters()
     }
@@ -80,5 +110,6 @@ extension TabBarController: TabBarParentDelegate {
     func counterAt(indexPath: IndexPath) -> Counter? {
         return dataController.retrieveCounterAt(indexPath: indexPath)
     }
+    
 }
 

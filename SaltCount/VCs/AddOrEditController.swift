@@ -12,35 +12,47 @@ class AddOrEditController: NSObject {
     
     // MARK: Properties
     
-    private let counterToEdit: Counter?
+    private let existingCounterData: (counter: Counter, indexPath: IndexPath)?
     
     // MARK Initialization
     
-    init(counter: Counter?) {
-        counterToEdit = counter
+    init(counterData: (Counter, IndexPath)?) {
+        existingCounterData = counterData
     }
     
     // MARK: Public Methods
     
+    func isCreatingNewCounter() -> Bool {
+        return existingCounterData == nil
+    }
+    
+    func counterData() -> (counter: Counter, indexPath: IndexPath)? {
+        return existingCounterData
+    }
+    
+    func counterIndex() -> IndexPath? {
+        return existingCounterData?.indexPath
+    }
+    
     func counterName() -> String? {
-        return counterToEdit?.name
+        return existingCounterData?.counter.name
     }
     
     func counterCount() -> Int? {
-        return counterToEdit?.countInt
+        return existingCounterData?.counter.countInt
     }
     
     func counterInc() -> Int? {
-        return counterToEdit?.incrementInt
+        return existingCounterData?.counter.incrementInt
     }
     
     func counterDec() -> Int? {
-        return counterToEdit?.decrementInt
+        return existingCounterData?.counter.decrementInt
     }
     
     func title() -> String {
         let title: String
-        if let counter = counterToEdit {
+        if let counter = existingCounterData?.counter {
             title = counter.name ?? "Edit Counter"
         } else {
             title = "Add New Counter"

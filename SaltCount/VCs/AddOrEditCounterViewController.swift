@@ -15,21 +15,22 @@ class AddOrEditCounterViewController: UIViewController {
     @IBOutlet weak var startingCountField: UITextField!
     @IBOutlet weak var incrementField: UITextField!
     @IBOutlet weak var decrementField: UITextField!
+    @IBOutlet weak var deleteButton: UIButton!
     
     private let controller: AddOrEditController
     private let parentDelegate: TabBarParentDelegate
     
-    static func addEditViewControllerInNC(counter: Counter? = nil,
+    static func addEditViewControllerInNC(counterData: (Counter, IndexPath)? = nil,
                                           parentDelegate: TabBarParentDelegate)
         -> UINavigationController {
-            let vc = AddOrEditCounterViewController(counter: counter, parentDelegate: parentDelegate)
+            let vc = AddOrEditCounterViewController(counterData: counterData, parentDelegate: parentDelegate)
             let nc = UINavigationController(rootViewController: vc)
             return nc
     }
     
-    init(counter: Counter? = nil,
+    init(counterData: (Counter, IndexPath)? = nil,
          parentDelegate: TabBarParentDelegate) {
-        controller = AddOrEditController(counter: counter)
+        controller = AddOrEditController(counterData: counterData)
         self.parentDelegate = parentDelegate
         super.init(nibName: addOrEditVCNibName, bundle: nil)
     }
@@ -41,6 +42,7 @@ class AddOrEditCounterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         populateFields()
+        deleteButton.isHidden = controller.isCreatingNewCounter()
         setupNavBar()
     }
     
@@ -69,6 +71,30 @@ class AddOrEditCounterViewController: UIViewController {
                                                                                      decrement: decrementField.intValue)
     }
     
+    private func dismissWithAddOrUpdateFor(counterData: NSDictionary) {
+        let completion: Completion = { [weak self] in
+            self?.fetchAndDismiss()
+        }
+        
+        if let existingCounterdata = controller.counterData() {
+            parentDelegate.updateCounterAt(indexPath: existingCounterdata.indexPath,
+                                           withValues: counterData,
+                                           completion: completion)
+        } else {
+            parentDelegate.createCounterFrom(counterDict: counterData, completion: completion)
+        }
+    }
+    
+    private func fetchAndDismiss() {
+        parentDelegate.fetchCounters() {
+            DispatchQueue.main.async { [weak self] in
+                self?.dismiss(animated: true)
+            }
+        }
+    }
+    
+    // MARK: Button Actions
+    
     @objc private func cancelButtonPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
     }
@@ -78,19 +104,35 @@ class AddOrEditCounterViewController: UIViewController {
                                                            startCount: startingCountField.intValue,
                                                            increment: incrementField.intValue,
                                                            decrement: decrementField.intValue) {
-            parentDelegate.createCounterFrom(counterDict: countDict) { [weak self] in
-                DispatchQueue.main.async {
-                    self?.dismiss(animated: true) {
-                        self?.parentDelegate.fetchCounters(completion: nil)
-                    }
-                }
-            }
+            dismissWithAddOrUpdateFor(counterData: countDict)
         }
     }
     
     @IBAction func textFieldEditingChanged(_ sender: Any) {
         updateSaveButton()
     }
+    
+    @IBAction func deleteButtonTapped(_ sender: Any) {
+        guard let name = controller.counterName(),
+            let index = controller.counterIndex() else {
+            return
+        }
+        
+        let alert = UIAlertController(title: "Confirm Delete", message: "Are you sure you want to delete \(name)?", preferredStyle: .alert)
+        
+        let cancel = UIAlertAction(title: "No", style: .cancel)
+        
+        let confirmDelete = UIAlertAction(title: "Yes", style: .destructive) { [weak self] _ in
+            self?.parentDelegate.deleteCounterAt(indexPath: index) {
+                self?.fetchAndDismiss()
+            }
+        }
+        
+        alert.addAction(cancel)
+        alert.addAction(confirmDelete)
+        present(alert, animated: true)
+    }
+    
 }
 
 extension AddOrEditCounterViewController: UITextFieldDelegate {

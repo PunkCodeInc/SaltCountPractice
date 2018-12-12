@@ -18,12 +18,6 @@ public class Counter: NSManagedObject {
     static let kDec = "decrement"
     static let kCount = "count"
     
-//    @NSManaged public var name: String?
-//    @NSManaged public var increment: Int64
-//    @NSManaged public var decrement: Int64
-//    @NSManaged public var count: Int64
-//    @NSManaged public var createDate: NSDate?
-    
     var countInt : Int {
         get { return Int(count) }
         set { count = Int64(newValue) }
@@ -42,10 +36,22 @@ public class Counter: NSManagedObject {
     // MARK: Convenience init - data should have been checked before now
     convenience init(dictionary: NSDictionary, entity: NSEntityDescription, insertIntoManagedObjectContext context: NSManagedObjectContext) {
         self.init(entity: entity, insertInto: context)
-        name = dictionary[Counter.kName] as? String
-        incrementInt = (dictionary[Counter.kInc] as? Int) ?? 0
-        decrementInt = (dictionary[Counter.kDec] as? Int) ?? 0
-        countInt = (dictionary[Counter.kCount] as? Int) ?? 0
+        updateWith(values: dictionary)
         createDate = NSDate()
+    }
+    
+    func incrementCount() {
+        count += increment
+    }
+    
+    func decrementCount() {
+        count -= decrement
+    }
+    
+    func updateWith(values: NSDictionary) {
+        name = values[Counter.kName] as? String
+        incrementInt = (values[Counter.kInc] as? Int) ?? 0
+        decrementInt = (values[Counter.kDec] as? Int) ?? 0
+        countInt = (values[Counter.kCount] as? Int) ?? 0
     }
 }

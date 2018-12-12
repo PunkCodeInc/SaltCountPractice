@@ -26,7 +26,6 @@ class TableListViewController: UIViewController {
     fileprivate let controller: TableListController
     private let parentDelegate: TabBarParentDelegate
     
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var countersTableView: UITableView!
     // MARK: Initialization
     
@@ -54,13 +53,7 @@ class TableListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        activityIndicator.startAnimating()
-        parentDelegate.fetchCounters() { [weak self] in
-            DispatchQueue.main.async {
-                self?.activityIndicator.stopAnimating()
-            }
-        }
-        
+        parentDelegate.fetchCounters(completion: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -85,16 +78,22 @@ class TableListViewController: UIViewController {
         countersTableView.tableFooterView = UIView()
     }
     
+    private func showAddEditVC(counterData: (Counter, IndexPath)? = nil) {
+        let addOrEditVC = AddOrEditCounterViewController.addEditViewControllerInNC(counterData: counterData,
+                                                                                   parentDelegate: parentDelegate)
+        DispatchQueue.main.async { [weak self] in
+            self?.present(addOrEditVC, animated: true)
+        }
+    }
+    
     @objc private func addButtonPressed(_ sender: UIBarButtonItem) {
-        let addOrEditVC = AddOrEditCounterViewController.addEditViewControllerInNC(parentDelegate: parentDelegate)
-        
-        present(addOrEditVC, animated: true)
+        showAddEditVC()
     }
 }
 
 extension TableListViewController: TableListUpdateDelegate {
     func beginUpdates() {
-        DispatchQueue.main.async { [weak self ] in
+        DispatchQueue.main.async { [weak self] in
             self?.countersTableView.beginUpdates()
         }
     }
@@ -164,7 +163,18 @@ extension TableListViewController: UITableViewDataSource {
     
     func configureCell(_ cell: CounterTableViewCell, at indexPath: IndexPath) {
         if let counter = parentDelegate.counterAt(indexPath: indexPath) {
-            cell.configureWith(counter: counter)
+            cell.configureWith(counter: counter) { [weak self] action in
+                if let updatedIndexPath = self?.countersTableView.indexPath(for: cell) {
+                    switch action {
+                    case .increment:
+                        self?.parentDelegate.incrementCounterAt(indexPath: updatedIndexPath)
+                    case .decrement:
+                        self?.parentDelegate.decrementCounterAt(indexPath: updatedIndexPath)
+                    case .edit:
+                        self?.showAddEditVC(counterData: (counter, updatedIndexPath))
+                    }
+                }
+            }
         }
     }
 }

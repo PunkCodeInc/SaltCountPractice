@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddOrEditCounterViewController" customModule="SaltCountPractice" customModuleProvider="target">
             <connections>
                 <outlet property="decrementField" destination="qAA-zG-N7n" id="j33-fJ-7Nm"/>
+                <outlet property="deleteButton" destination="vc3-6e-Gym" id="P5L-yB-0f3"/>
                 <outlet property="incrementField" destination="Fq9-a8-7iW" id="3XQ-Dd-qbf"/>
                 <outlet property="nameField" destination="4QN-IG-xtm" id="d93-XC-2bu"/>
                 <outlet property="startingCountField" destination="M1W-nh-Ed6" id="b3f-Em-2DX"/>
@@ -69,11 +69,27 @@
                         </textField>
                     </subviews>
                 </stackView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vc3-6e-Gym">
+                    <rect key="frame" x="20" y="248" width="335" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Tli-Lg-zQ2"/>
+                    </constraints>
+                    <state key="normal" title="Delete">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="deleteButtonTapped:" destination="-1" eventType="touchUpInside" id="OKR-4x-2pO"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Tfz-ka-98d" secondAttribute="trailing" constant="20" id="2DD-48-qzt"/>
                 <constraint firstItem="Tfz-ka-98d" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="UbK-8d-hgL"/>
+                <constraint firstItem="vc3-6e-Gym" firstAttribute="top" secondItem="Tfz-ka-98d" secondAttribute="bottom" constant="22" id="a97-7B-sZI"/>
+                <constraint firstItem="vc3-6e-Gym" firstAttribute="trailing" secondItem="Tfz-ka-98d" secondAttribute="trailing" id="dkR-EA-mGj"/>
+                <constraint firstItem="vc3-6e-Gym" firstAttribute="leading" secondItem="Tfz-ka-98d" secondAttribute="leading" id="tad-LH-9VT"/>
                 <constraint firstItem="Tfz-ka-98d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="tqe-eT-cBE"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
